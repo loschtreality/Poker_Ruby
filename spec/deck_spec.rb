@@ -27,4 +27,15 @@ describe Deck do
       expect(deck1.cards).not_to eq(deck2.cards)
     end
   end
+
+  describe "#deal" do
+    before(:each) {deck.deal}
+    it "deals one card" do
+      expect(deck.cards.length).to eq(51)
+    end
+
+    it "returns an instance of Card" do
+      expect(deck.deal).to be_a(Card)
+    end
+  end
 end

@@ -17,5 +17,8 @@ class Deck
     cards.shuffle!
   end
 
+  def deal
+    return @cards.pop
+  end
 
 end
